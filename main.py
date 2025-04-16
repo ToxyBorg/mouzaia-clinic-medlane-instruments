@@ -1,0 +1,398 @@
+import pandas as pd
+import openpyxl
+from openpyxl.styles import Alignment, Font, Border, Side
+from openpyxl.utils import get_column_letter
+import os
+
+# Define our instrument arrays
+
+cesarienne_3_instruments = [
+    "02003",
+    "02602",
+    "17505",
+    "17505",
+    "21602",
+    "28402",
+    "28402",
+    "28402",
+    "28402",
+    "28402",
+    "30909",
+    "30912",
+    "33603",
+    "33603",
+    "34203",
+    "35103",
+    "35405",
+    "35405",
+    "35405",
+    "37609",
+    "37609",
+    "37705",
+    "38403",
+    "38403",
+    "45503",
+    "47210",
+    "K1008",
+    "UC4314",
+    "UC4314",
+    "UN130",
+    "UN140",
+]
+cesarienne_5_instruments = [
+    "02003",
+    "02602",
+    "17505",
+    "17505",
+    "21602",
+    "28402",
+    "28402",
+    "28402",
+    "28402",
+    "28402",
+    "30909",
+    "30912",
+    "33603",
+    "33603",
+    "35103",
+    "35103",
+    "35405",
+    "35405",
+    "35405",
+    "37609",
+    "37609",
+    "37705",
+    "38403",
+    "38403",
+    "45506",
+    "47210",
+    "K1008",
+    "UC4314",
+    "UC4314",
+    "UN130",
+    "UN140",
+]
+hystérectomie_ko_1_instruments = [
+    "02004",
+    "02602",
+    "02602",
+    "02728",
+    "03510",
+    "17505",
+    "17505",
+    "17706",
+    "20304",
+    "20304",
+    "21601",
+    "21602",
+    "25514",
+    "26712",
+    "28402",
+    "28402",
+    "28402",
+    "28402",
+    "30933",
+    "30935",
+    "30938",
+    "33601",
+    "33603",
+    "33603",
+    "33603",
+    "33605",
+    "33705",
+    "33705",
+    "33801",
+    "33801",
+    "34207",
+    "34502",
+    "35103",
+    "35103",
+    "35103",
+    "35103",
+    "35405",
+    "36008",
+    "36008",
+    "36008",
+    "37606",
+    "37607",
+    "37607",
+    "37705",
+    "38903",
+    "38903",
+    "46402",
+    "47203",
+    "47209",
+    "47210",
+    "47213",
+    "47213",
+    "47505",
+    "52929",
+    "D2BB",
+    "K1008",
+    "K1301",
+    "UC4308",
+    "UC4309",
+    "UC4314",
+    "UN130",
+    "UN140",
+    "UN145",
+]
+eventration_sein_1_instruments = [
+    "37609",
+    "37609",
+    "37609",
+    "N060",
+    "UN140",
+    "35405",
+    "UN130",
+    "UC4312",
+    "UC4314",
+    "UC4306",
+    "38305",
+    "UC4309",
+    "37705",
+    "35103",
+    "38903",
+    "38903",
+    "35403",
+    "35101",
+    "35101",
+    "38902",
+    "35405",
+    "02602",
+    "UC4313",
+    "UN120",
+    "35405",
+    "34203",
+    "34203",
+    "38902",
+    "35405",
+    "38903",
+    "35103",
+    "35103",
+    "26708",
+    "35405",
+    "35403",
+    "35403",
+    "02602",
+    "01217",
+    "02003",
+    "30910",
+    "30909",
+    "29905",
+    "28402",
+    "28402",
+    "28402",
+    "28402",
+    "28402",
+    "00517",
+    "17505",
+    "17505",
+    "14104",
+    "14104",
+    "14104",
+    "14104",
+    "01217",
+    "47207",
+    "17706",
+    "W792",
+    "17706",
+    "21506",
+    "52919",
+    "17507",
+    "17507",
+    "K1007",
+    "K1008",
+]
+amygdales_enfant_1_instruments = [
+    "13607",
+    "13703",
+    "13608",
+    "13604",
+    "13703",
+    "13703",
+    "13701",
+    "13704",
+    "13701",
+    "13605",
+    "13605",
+    "13609",
+    "13703",
+    "13607",
+    "13702",
+    "13704",
+    "13703",
+    "13702",
+    "13608",
+    "13605",
+    "13608",
+    "13701",
+    "13605",
+    "13607",
+    "13702",
+    "13704",
+    "13607",
+    "13605",
+    "13609",
+    "13702",
+    "13702",
+    "13605",
+    "13608",
+    "13605",
+    "13604",
+    "13604",
+    "13609",
+    "13604",
+    "13607",
+    "13701",
+    "13702",
+    "02728",
+    "13607",
+    "02728",
+    "31705",
+    "31706",
+    "Z523",
+    "26105",
+    "26107",
+    "26105",
+    "26104",
+    "26106",
+    "26106",
+    "26105",
+    "26106",
+    "26104",
+    "26102",
+    "26103",
+]
+# Define the instrument sets to process
+instrument_sets = [
+    {"title": "CESARIENNE 3", "instruments": cesarienne_3_instruments},
+    {"title": "CESARIENNE 5", "instruments": cesarienne_5_instruments},
+    {"title": "HYSTERECTOMIE KO 1", "instruments": hystérectomie_ko_1_instruments},
+    {"title": "EVENTRATION SEIN 1", "instruments": eventration_sein_1_instruments},
+    {"title": "AMYGDALITES ENFANT 1", "instruments": amygdales_enfant_1_instruments},
+]
+
+# Define output Excel file
+output_file = "./public/instruments_inventory.xlsx"
+
+# Load the reference Excel file
+reference_df = pd.read_excel(
+    "./public/Ensemble de la commande Mouzaia par boite avec code EAN13.xlsx"
+)
+
+
+# Format references in the dataframe for matching
+def format_ref(ref_code):
+    if not isinstance(ref_code, str):
+        ref_code = str(ref_code)
+    return ref_code
+
+
+reference_df["Réf"] = reference_df["Réf"].apply(format_ref)
+
+# Check if output file exists, if not create a new workbook
+if os.path.exists(output_file):
+    wb = openpyxl.load_workbook(output_file)
+else:
+    wb = openpyxl.Workbook()
+    # Remove default sheet
+    if "Sheet" in wb.sheetnames:
+        del wb["Sheet"]
+
+# Process each instrument set
+for instrument_set in instrument_sets:
+    box_title = instrument_set["title"]
+    current_instruments = sorted(instrument_set["instruments"])
+
+    # Create a new sheet or get existing one
+    if box_title in wb.sheetnames:
+        # If sheet exists, remove it and create new one
+        idx = wb.sheetnames.index(box_title)
+        wb.remove(wb[box_title])
+        ws = wb.create_sheet(box_title, idx)
+    else:
+        ws = wb.create_sheet(box_title)
+
+    # Create data for the sheet
+    data = []
+    missing_instruments = []
+
+    for i, code in enumerate(current_instruments, 1):
+        matching_rows = reference_df[reference_df["Réf"] == code]
+
+        if not matching_rows.empty:
+            # Found the reference code
+            libelle = matching_rows["Libellé"].values[0]
+        else:
+            # Reference code not found
+            libelle = "N/A"
+            missing_instruments.append(code)
+
+        data.append({"No": i, "Réf": code, "Libellé": libelle})
+
+    # Add header row
+    ws.append(["No", "Réf", "Libellé"])
+
+    # Add data rows
+    for row in data:
+        ws.append([row["No"], row["Réf"], row["Libellé"]])
+
+    # Format the sheet
+    # Add title and adjust columns
+    ws.insert_rows(1, 2)  # Insert 2 rows at the top
+    ws.merge_cells("A1:C1")  # Merge cells for title
+
+    # Set title
+    ws["A1"] = box_title
+    ws["A1"].font = Font(size=16, bold=True)
+    ws["A1"].alignment = Alignment(horizontal="center", vertical="center")
+
+    # Define borders
+    thin_border = Border(
+        left=Side(style="thin"),
+        right=Side(style="thin"),
+        top=Side(style="thin"),
+        bottom=Side(style="thin"),
+    )
+
+    # Apply borders and center alignment to all cells
+    for row in ws.iter_rows(min_row=3, max_row=ws.max_row, min_col=1, max_col=3):
+        for cell in row:
+            cell.border = thin_border
+            if cell.column == 1:  # Number column
+                cell.alignment = Alignment(horizontal="center")
+            elif cell.column == 2:  # Ref column
+                cell.alignment = Alignment(horizontal="center")
+            else:  # Libelle column
+                cell.alignment = Alignment(horizontal="left", vertical="center")
+
+    # Adjust column widths
+    ws.column_dimensions["A"].width = 8
+    ws.column_dimensions["B"].width = 15
+    ws.column_dimensions["C"].width = 70
+
+    # Format header row
+    header_row = 3
+    for col in range(1, 4):
+        cell = ws.cell(row=header_row, column=col)
+        cell.font = Font(bold=True)
+        cell.border = thin_border
+        cell.alignment = Alignment(horizontal="center", vertical="center")
+
+    # Print information about this sheet
+    found_count = len(current_instruments) - len(missing_instruments)
+    print(f"\n{box_title}:")
+    print(f"- Total instruments: {len(current_instruments)}")
+    print(
+        f"- Found instruments: {found_count} ({found_count/len(current_instruments)*100:.1f}%)"
+    )
+
+    if missing_instruments:
+        print(f"- Missing instruments ({len(missing_instruments)}):")
+        for code in missing_instruments:
+            print(f"  • {code}")
+
+# Save the workbook
+wb.save(output_file)
+print(f"\nExcel file '{output_file}' has been updated with all instrument sets.")
