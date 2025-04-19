@@ -72,6 +72,40 @@ cesarienne_5_instruments = [
     "UN130",
     "UN140",
 ]
+cesarienne_6_instruments = [
+    "02003",
+    "17505",
+    "17505",
+    "30909",
+    "30912",
+    "47210",
+    "21603",
+    "K1008",
+    "45506",
+    "28402",
+    "28402",
+    "28402",
+    "28402",
+    "28402",
+    "02602",
+    "37705",
+    "UC4324",
+    "UC4312",
+    "34203",
+    "35103",
+    "35405",
+    "35405",
+    "35405",
+    "35405",
+    "33603",
+    "33603",
+    "38403",
+    "38401",
+    "38403",
+    "37607",
+    "UN130",
+    "UN140",
+]
 hystérectomie_ko_1_instruments = [
     "02004",
     "02602",
@@ -264,13 +298,105 @@ amygdales_enfant_1_instruments = [
     "26102",
     "26103",
 ]
+
+accouchement_3_instruments = [
+    "47209",
+    "30914",
+    "UC4314",
+    "03207",
+    "UN140",
+    "35403",
+    "35409",
+    "37609",
+    "36006",
+    "35409",
+    "35407",
+    "37607",
+]
+lv_1_coelioscopie_instruments = [
+    "K1008",
+    "45504",
+    "25501",
+    "17505",
+    "17505",
+    "03612",
+    "02802",
+    "50619",
+    "30909",
+    "30929",
+    "02602",
+    "37802",
+    "35303",
+    "35303",
+    "04117",
+    "37609",
+    "35403",
+    "UN120",
+    "35403",
+    "15002",
+    "15002",
+    "15002",
+    "15004",
+    "15004",
+    "15002",
+    "2430013",
+    "0483",
+    "14058",
+    "1900002",
+    "1900113",
+    "140164",
+]
+lv_2_coelioscopie_instruments = [
+    "2390000",
+    "1900113",
+    "14058",
+    "18009M2",
+    "15002",
+    "15002",
+    "15002",
+    "15004",
+    "2430013",
+    "17240829 0011",
+    "17240829 008",
+    "17240829 043",
+    "17240829 047",
+    "6230901",
+    "16240731 024",
+    "16240731",
+    "17231011 002",
+    "140164",
+    "17230324 017",
+    "K1008",
+    "02602",
+    "30924",
+    "17505",
+    "17505",
+    "30929",
+    "37801",
+    "02001",
+    "03510",
+    "35403",
+    "35303",
+    "35403",
+    "35303",
+    "37609",
+    "35203",
+    "UN120",
+    "UC4306",
+]
+
+
 # Define the instrument sets to process
 instrument_sets = [
     {"title": "CESARIENNE 3", "instruments": cesarienne_3_instruments},
     {"title": "CESARIENNE 5", "instruments": cesarienne_5_instruments},
+    {"title": "CESARIENNE 6", "instruments": cesarienne_6_instruments},
     {"title": "HYSTERECTOMIE KO 1", "instruments": hystérectomie_ko_1_instruments},
     {"title": "EVENTRATION SEIN 1", "instruments": eventration_sein_1_instruments},
     {"title": "AMYGDALITES ENFANT 1", "instruments": amygdales_enfant_1_instruments},
+    {"title": "ACCOUCHEMENT 3", "instruments": accouchement_3_instruments},
+    {"title": "LV 1 COELIOSCOPIE", "instruments": lv_1_coelioscopie_instruments},
+    {"title": "LV 2 COELIOSCOPIE", "instruments": lv_2_coelioscopie_instruments},
 ]
 
 # Define output Excel file
@@ -303,7 +429,8 @@ else:
 # Process each instrument set
 for instrument_set in instrument_sets:
     box_title = instrument_set["title"]
-    current_instruments = sorted(instrument_set["instruments"])
+    # current_instruments = sorted(instrument_set["instruments"])
+    current_instruments = instrument_set["instruments"]
 
     # Create a new sheet or get existing one
     if box_title in wb.sheetnames:
