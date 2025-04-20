@@ -6,6 +6,38 @@ import os
 
 # Define our instrument arrays
 
+cesarienne_2_instruments = [
+    "K1008",
+    "45505",
+    "21604",
+    "30933",
+    "30935",
+    "47213",
+    "17505",
+    "17505",
+    "02003",
+    "28402",
+    "28402",
+    "28402",
+    "28402",
+    "37705",
+    "38403",
+    "38401",
+    "38403",
+    "37609",
+    "33603",
+    "33603",
+    "35203",
+    "35103",
+    "UN140",
+    "UN130",
+    "UC4314",
+    "03612",
+    "35405",
+    "35405",
+    "35405",
+    "02602",
+]
 cesarienne_3_instruments = [
     "02003",
     "02602",
@@ -298,7 +330,6 @@ amygdales_enfant_1_instruments = [
     "26102",
     "26103",
 ]
-
 accouchement_3_instruments = [
     "47209",
     "30914",
@@ -388,6 +419,7 @@ lv_2_coelioscopie_instruments = [
 
 # Define the instrument sets to process
 instrument_sets = [
+    {"title": "CESARIENNE 2", "instruments": cesarienne_2_instruments},
     {"title": "CESARIENNE 3", "instruments": cesarienne_3_instruments},
     {"title": "CESARIENNE 5", "instruments": cesarienne_5_instruments},
     {"title": "CESARIENNE 6", "instruments": cesarienne_6_instruments},
