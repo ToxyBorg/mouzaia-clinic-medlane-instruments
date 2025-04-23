@@ -416,7 +416,84 @@ lv_2_coelioscopie_instruments = [
     "UC4306",
 ]
 
-
+hernie_appendicite_3_instruments = [
+    "28402",
+    "28402",
+    "28402",
+    "28402",
+    "30929",
+    "30909",
+    "30935",
+    "30910",
+    "17810",
+    "17810",
+    "17706",
+    "17505",
+    "17505",
+    "02003",
+    "47601",
+    "K1007",
+    "02602",
+    "UN130",
+    "37609",
+    "35101",
+    "35101",
+    "35513",
+    "35101",
+    "35403",
+    "26706",
+    "37609",
+    "37705",
+    "UC4314",
+    "UC4312",
+    "UN130",
+    "UC4304",
+    "35403",
+    "39003",
+    "39003",
+]
+hernie_appendicite_4_instruments = [
+    "47601",
+    "17809",
+    "17810",
+    "25608",
+    "17505",
+    "17505",
+    "30932",
+    "17706",
+    "28402",
+    "28402",
+    "28402",
+    "28402",
+    "28402",
+    "30911",
+    "30910",
+    "30926",
+    "02003",
+    "UC4302",
+    "UC4314",
+    "UC4313",
+    "UN120",
+    "UN130",
+    "02602",
+    "37705",
+    "37609",
+    "37609",
+    "38901",
+    "38901",
+    "26706",
+    "35403",
+    "35403",
+    "35101",
+    "35101",
+    "35203",
+    "35513",
+    "35101",
+    "35101",
+    "39003",
+    "39003",
+    "K1008",
+]
 # Define the instrument sets to process
 instrument_sets = [
     {"title": "CESARIENNE 2", "instruments": cesarienne_2_instruments},
@@ -429,6 +506,8 @@ instrument_sets = [
     {"title": "ACCOUCHEMENT 3", "instruments": accouchement_3_instruments},
     {"title": "LV 1 COELIOSCOPIE", "instruments": lv_1_coelioscopie_instruments},
     {"title": "LV 2 COELIOSCOPIE", "instruments": lv_2_coelioscopie_instruments},
+    {"title": "HERNIE APPENDICITE 3", "instruments": hernie_appendicite_3_instruments},
+    {"title": "HERNIE APPENDICITE 4", "instruments": hernie_appendicite_4_instruments},
 ]
 
 # Define output Excel file
@@ -529,7 +608,7 @@ for instrument_set in instrument_sets:
     # Adjust column widths
     ws.column_dimensions["A"].width = 8
     ws.column_dimensions["B"].width = 15
-    ws.column_dimensions["C"].width = 70
+    ws.column_dimensions["C"].width = 60
 
     # Format header row
     header_row = 3
