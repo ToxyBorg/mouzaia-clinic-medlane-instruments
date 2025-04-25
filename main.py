@@ -634,6 +634,37 @@ goitre_2_instruments = [
     "UC4302",
     "UC4304",
 ]
+
+dcn_1_instruments = [
+    "46010",
+    "46011",
+    "46008",
+    "55604",
+    "N544",
+    "46005",
+    "17301",
+    "17307",
+    "56615",
+    "07415",
+    "29601",
+    "02001",
+    "52307",
+    "UC4382",
+    "17805",
+    "C8YZ",
+    "02705",
+    "37904",
+    "A5KZ",
+    "02704",
+    "UC4312",
+    "02807",
+    "UC4335",
+    "NU53",
+    "A7ZQ",
+    "K1006",
+    "K1007",
+    "K1008",
+]
 # Define the instrument sets to process
 instrument_sets = [
     {"title": "CESARIENNE 2", "instruments": cesarienne_2_instruments},
@@ -651,6 +682,7 @@ instrument_sets = [
     {"title": "HERNIE APPENDICITE 4", "instruments": hernie_appendicite_4_instruments},
     {"title": "GOITRE 1", "instruments": goitre_1_instruments},
     {"title": "GOITRE 2", "instruments": goitre_2_instruments},
+    {"title": "DCN 1", "instruments": dcn_1_instruments},
 ]
 
 # Define output Excel file
