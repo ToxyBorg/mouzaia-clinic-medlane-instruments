@@ -786,6 +786,45 @@ mini_frag_2_instruments = [
     "26702",
     "26702",
 ]
+curetage_3_instruments = [
+    "K1008",
+    "45505",
+    "K1230",
+    "14817",
+    "14815",
+    "37607",
+    "37705",
+    "14816",
+    "14814",
+    "27503",
+    "25514",
+    "02149",
+    "02149",
+    "02149",
+    "02149",
+    "02149",
+    "02149",
+    "02149",
+    "02149",
+]
+curetage_4_instruments = [
+    "K1008",
+    "02149",
+    "02149",
+    "02149",
+    "02149",
+    "02149",
+    "02149",
+    "K1230",
+    "45506",
+    "37607",
+    "37804",
+    "33801",
+    "14815",
+    "14816",
+    "14816",
+    "25501",
+]
 # Define the instrument sets to process
 instrument_sets = [
     {"title": "CESARIENNE 2", "instruments": cesarienne_2_instruments},
@@ -809,6 +848,8 @@ instrument_sets = [
         "instruments": kyste_hydatique_du_foie_1_instruments,
     },
     {"title": "MINI FRAG 2", "instruments": mini_frag_2_instruments},
+    {"title": "CURETAGE 3", "instruments": curetage_3_instruments},
+    {"title": "CURETAGE 4", "instruments": curetage_4_instruments},
 ]
 
 # Define output Excel file
