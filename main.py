@@ -666,6 +666,7 @@ dcn_1_instruments = [
     "K1008",
 ]
 
+
 kyste_hydatique_du_foie_1_instruments = [
     "47506",
     "02004",
@@ -726,6 +727,65 @@ kyste_hydatique_du_foie_1_instruments = [
     "K1301",
     "02602",
 ]
+
+mini_frag_2_instruments = [
+    "17504",
+    "17504",
+    "17504",
+    "17504",
+    "33305",
+    "32502",
+    "29304",
+    "Z590",
+    "Z590",
+    "15813",
+    "15817",
+    "17205",
+    "18504",
+    "18502",
+    "18506",
+    "02001",
+    "14104",
+    "14103",
+    "18502",
+    "45103",
+    "",
+    "21901",
+    "22502",
+    "22801",
+    "29304",
+    "29601",
+    "29517",
+    "30304",
+    "30401",
+    "22205",
+    "K1306",
+    "K1307",
+    "N785",
+    "N785",
+    "17204",
+    "17204",
+    "17805",
+    "17805",
+    "K1007",
+    "K1006",
+    "37904",
+    "UN430",
+    "NU53",
+    "02602",
+    "03408",
+    "UC4311",
+    "UC4302",
+    "UC4302",
+    "38901",
+    "16408",
+    "34912",
+    "34910",
+    "34910",
+    "34910",
+    "26702",
+    "26702",
+]
 # Define the instrument sets to process
 instrument_sets = [
     {"title": "CESARIENNE 2", "instruments": cesarienne_2_instruments},
@@ -748,6 +808,7 @@ instrument_sets = [
         "title": "KYSTE HYDATIQUE DU FOIE 1",
         "instruments": kyste_hydatique_du_foie_1_instruments,
     },
+    {"title": "MINI FRAG 2", "instruments": mini_frag_2_instruments},
 ]
 
 # Define output Excel file
