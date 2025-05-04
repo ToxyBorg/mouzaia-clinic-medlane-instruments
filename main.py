@@ -373,6 +373,19 @@ amygdales_adulte_2_instruments = [
     "26003",
     "26002",
 ]
+
+accouchement_1_instruments = [
+    "47209",
+    "45506",
+    "35407",
+    "35407",
+    "37607",
+    "37609",
+    "36006",
+    "UC4314",
+    "UN140",
+    "35409",
+]
 accouchement_3_instruments = [
     "47209",
     "30914",
@@ -982,6 +995,7 @@ instrument_sets = [
     {"title": "AMYGDALITES ENFANT 1", "instruments": amygdales_enfant_1_instruments},
     {"title": "AMYGDALITES ADULTE 1", "instruments": amygdales_adulte_1_instruments},
     {"title": "AMYGDALITES ADULTE 2", "instruments": amygdales_adulte_2_instruments},
+    {"title": "ACCOUCHEMENT 1", "instruments": accouchement_1_instruments},
     {"title": "ACCOUCHEMENT 3", "instruments": accouchement_3_instruments},
     {"title": "LV 1 COELIOSCOPIE", "instruments": lv_1_coelioscopie_instruments},
     {"title": "LV 2 COELIOSCOPIE", "instruments": lv_2_coelioscopie_instruments},
