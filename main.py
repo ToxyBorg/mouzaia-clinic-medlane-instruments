@@ -1172,6 +1172,67 @@ abdomen_enfant_1_instruments = [
     "35103",
     "35203",
 ]
+
+procto_1_instruments = [
+    "A4MP",
+    "30929",
+    "30933",
+    "02003",
+    "28402",
+    "28402",
+    "28402",
+    "28402",
+    "46201",
+    "46201",
+    "K1007",
+    "K1008",
+    "37705",
+    "55951",
+    "38903",
+    "45101",
+    "35101",
+    "35103",
+    "35513",
+    "38401",
+    "37610",
+    "UN130",
+    "UC4306",
+    "35403",
+    "35403",
+    "38903",
+    "UC4314",
+]
+
+procto_2_instruments = [
+    "K1008",
+    "K1007",
+    "30929",
+    "30933",
+    "02003",
+    "UC4306",
+    "45101",
+    "46201",
+    "46201",
+    "N786",
+    "28402",
+    "28402",
+    "28402",
+    "28402",
+    "A4MP",
+    "37705",
+    "38903",
+    "38903",
+    "UN130",
+    "UC4314",
+    "37610",
+    "38401",
+    "55951",
+    "35103",
+    "35103",
+    "35513",
+    "35403",
+    "35403",
+]
 # Define the instrument sets to process
 instrument_sets = [
     {"title": "CESARIENNE 2", "instruments": cesarienne_2_instruments},
@@ -1206,6 +1267,8 @@ instrument_sets = [
     {"title": "CERCLAGE 4", "instruments": cerclage_4_instruments},
     {"title": "ORTHOPEDIE MS 1", "instruments": orthopedie_ms_1_instruments},
     {"title": "ABDOMEN ENFANT 1", "instruments": abdomen_enfant_1_instruments},
+    {"title": "PROCTO 1", "instruments": procto_1_instruments},
+    {"title": "PROCTO 2", "instruments": procto_2_instruments},
 ]
 
 # Define output Excel file
@@ -1238,8 +1301,8 @@ else:
 # Process each instrument set
 for instrument_set in instrument_sets:
     box_title = instrument_set["title"]
-    # current_instruments = sorted(instrument_set["instruments"])
-    current_instruments = instrument_set["instruments"]
+    current_instruments = sorted(instrument_set["instruments"])
+    # current_instruments = instrument_set["instruments"]
 
     # Create a new sheet or get existing one
     if box_title in wb.sheetnames:
