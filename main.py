@@ -1233,6 +1233,46 @@ procto_2_instruments = [
     "35403",
     "35403",
 ]
+
+artro_1_instruments = [
+    "30935",
+    "30933",
+    "28402",
+    "28402",
+    "28402",
+    "28402",
+    "28402",
+    "03612",
+    "04117",
+    "39712",
+    "36124",
+    "S3431XA.SL",
+    "S3431XC.UM",
+    "S3431XB.UL",
+    "S3431XB.UL",
+    "31175RE.2RE",
+]
+
+artro_2_instruments = [
+    "28402",
+    "28402",
+    "28402",
+    "28402",
+    "28402",
+    "29905",
+    "30933",
+    "37705",
+    "UN140",
+    "03612",
+    "UC4304",
+    "31175RE.2RE",
+    "36124",
+    "36124",
+    "S3431XA.SL",
+    "S3431XB.UR",
+    "S3431XB",
+    "S3431XC.UM",
+]
 # Define the instrument sets to process
 instrument_sets = [
     {"title": "CESARIENNE 2", "instruments": cesarienne_2_instruments},
@@ -1269,6 +1309,8 @@ instrument_sets = [
     {"title": "ABDOMEN ENFANT 1", "instruments": abdomen_enfant_1_instruments},
     {"title": "PROCTO 1", "instruments": procto_1_instruments},
     {"title": "PROCTO 2", "instruments": procto_2_instruments},
+    {"title": "ARTRO 1", "instruments": artro_1_instruments},
+    {"title": "ARTRO 2", "instruments": artro_2_instruments},
 ]
 
 # Define output Excel file
