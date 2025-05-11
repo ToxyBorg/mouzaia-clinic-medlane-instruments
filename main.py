@@ -1273,6 +1273,16 @@ artro_2_instruments = [
     "S3431XB",
     "S3431XC.UM",
 ]
+
+colposcopie_consultation_gyneco_instruments = [
+    "34208",
+    "37607",
+    "38403",
+    "34207",
+    "33801",
+    "33801",
+    "25501",
+]
 # Define the instrument sets to process
 instrument_sets = [
     {"title": "CESARIENNE 2", "instruments": cesarienne_2_instruments},
@@ -1311,6 +1321,10 @@ instrument_sets = [
     {"title": "PROCTO 2", "instruments": procto_2_instruments},
     {"title": "ARTRO 1", "instruments": artro_1_instruments},
     {"title": "ARTRO 2", "instruments": artro_2_instruments},
+    {
+        "title": "COLPOSCOPIE CONSULTATION GYNECO",
+        "instruments": colposcopie_consultation_gyneco_instruments,
+    },
 ]
 
 # Define output Excel file
