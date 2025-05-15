@@ -1358,6 +1358,25 @@ colposcopie_consultation_gyneco_instruments = [
     "25501",
 ]
 
+embrochage_osteo_1_instruments = [
+    "25816",
+    "32306",
+    "K1026",
+    "K1027",
+    "32101",
+    "32101",
+    "32205",
+    "54703",
+    "54703",
+    "58323",
+    "54707",
+    "K1073",
+    "K1075",
+    "Kirschner",
+    "Kirschner",
+    "Kirschner",
+]
+
 
 # Define the instrument sets to process
 instrument_sets = [
@@ -1404,6 +1423,10 @@ instrument_sets = [
     {
         "title": "COLPOSCOPIE CONSULTATION GYNECO",
         "instruments": colposcopie_consultation_gyneco_instruments,
+    },
+    {
+        "title": "EMBROCHAGE OSTEO 1",
+        "instruments": embrochage_osteo_1_instruments,
     },
 ]
 
