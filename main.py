@@ -1377,6 +1377,46 @@ embrochage_osteo_1_instruments = [
     "Kirschner",
 ]
 
+amputation_1_instruments = [
+    "44804",
+    "29709",
+    "32205",
+    "35103",
+    "33002",
+    "35103",
+    "C5YF",
+    "35103",
+    "02003",
+    "35103",
+    "02004",
+    "35101",
+    "41504",
+    "35513",
+    "32306",
+    "UN120",
+    "17810",
+    "UN130",
+    "17810",
+    "UC4334",
+    "28402",
+    "03510",
+    "28402",
+    "28402",
+    "28402",
+    "30932",
+    "30909",
+    "29712",
+    "30909",
+    "17706",
+    "17506",
+    "17506",
+    "W467",
+    "W467",
+    "19504",
+    "37802",
+    "35409",
+]
+
 
 # Define the instrument sets to process
 instrument_sets = [
@@ -1427,6 +1467,10 @@ instrument_sets = [
     {
         "title": "EMBROCHAGE OSTEO 1",
         "instruments": embrochage_osteo_1_instruments,
+    },
+    {
+        "title": "AMPUTATION 1",
+        "instruments": amputation_1_instruments,
     },
 ]
 
