@@ -1034,7 +1034,29 @@ mini_frag_2_instruments = [
     "26702",
     "26702",
 ]
-curetage_3_instruments = [
+curettage_2_instruments = [
+    "K1008",
+    "02802",
+    "37804",
+    "37607",
+    "25501",
+    "K1230",
+    "33801",
+    "14816",
+    "14815",
+    "14814",
+    "14817",
+    "02149",
+    "02149",
+    "02149",
+    "02149",
+    "02149",
+    "02149",
+    "02149",
+    "02149",
+    "45506",
+]
+curettage_3_instruments = [
     "K1008",
     "45505",
     "K1230",
@@ -1055,7 +1077,7 @@ curetage_3_instruments = [
     "02149",
     "02149",
 ]
-curetage_4_instruments = [
+curettage_4_instruments = [
     "K1008",
     "02149",
     "02149",
@@ -1914,6 +1936,7 @@ hepatobiliaire_1_instruments = [
     "55952",
 ]
 
+
 # Define the instrument sets to process
 instrument_sets = [
     {"title": "CESARIENNE 2", "instruments": cesarienne_2_instruments},
@@ -1944,8 +1967,12 @@ instrument_sets = [
         "instruments": kyste_hydatique_du_foie_1_instruments,
     },
     {"title": "MINI FRAG 2", "instruments": mini_frag_2_instruments},
-    {"title": "CURETAGE 3", "instruments": curetage_3_instruments},
-    {"title": "CURETAGE 4", "instruments": curetage_4_instruments},
+    {
+        "title": "CURETTAGE 2",
+        "instruments": curettage_2_instruments,
+    },
+    {"title": "CURETTAGE 3", "instruments": curettage_3_instruments},
+    {"title": "CURETTAGE 4", "instruments": curettage_4_instruments},
     {"title": "RHINOPLASTIE 1", "instruments": rhinoplastie_1_instruments},
     {"title": "CERCLAGE 4", "instruments": cerclage_4_instruments},
     {"title": "ORTHOPEDIE MS 1", "instruments": orthopedie_ms_1_instruments},
