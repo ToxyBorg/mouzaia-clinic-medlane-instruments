@@ -2058,6 +2058,46 @@ hepatobiliaire_1_instruments = [
     "55952",
 ]
 
+fav_1_instruments = [
+    "02001",
+    "02003",
+    "17503",
+    "17503",
+    "30923",
+    "30904",
+    "30907",
+    "30009",
+    "22803",
+    "17805",
+    "17805",
+    "14104",
+    "",
+    "",
+    "K1005",
+    "K1006",
+    "K1008",
+    "08602",
+    "08602",
+    "08601",
+    "08601",
+    "02602",
+    "37904",
+    "UN466",
+    "39701",
+    "UL3500",
+    "UC4367",
+    "UC4312",
+    "UC4302",
+    "UC4341",
+    "38914",
+    "34906",
+    "26702",
+    "35006",
+    "34910",
+    "34910",
+    "34904",
+    "34904",
+]
 
 # Define the instrument sets to process
 instrument_sets = [
@@ -2150,6 +2190,10 @@ instrument_sets = [
     {
         "title": "HEPATOBILIAIRE 1",
         "instruments": hepatobiliaire_1_instruments,
+    },
+    {
+        "title": "FAV 1",
+        "instruments": fav_1_instruments,
     },
 ]
 
