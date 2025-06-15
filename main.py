@@ -2099,6 +2099,44 @@ fav_1_instruments = [
     "34904",
 ]
 
+endoscopie_hypophyse_1_instruments = [
+    "U2705",
+    "46011",
+    "46010",
+    "46008",
+    "Z385",
+    "54306",
+    "02705",
+    "K1246",
+    "37016",
+    "08134",
+    "K1005",
+    "K1006",
+    "K1007",
+    "UN000",
+    "43402",
+    "37904",
+    "29601",
+    "17210",
+    "55604",
+    "17210",
+    "02704",
+    "A7ZC",
+    "UC4311",
+    "56609",
+    "42390",
+    "A7ZN",
+    "A5KZ",
+    "UL145",
+    "N934",
+    "A7ZM",
+    "N933",
+    "17307",
+    "N934",
+    "50617",
+]
+
+
 # Define the instrument sets to process
 instrument_sets = [
     {"title": "CESARIENNE 2", "instruments": cesarienne_2_instruments},
@@ -2194,6 +2232,10 @@ instrument_sets = [
     {
         "title": "FAV 1",
         "instruments": fav_1_instruments,
+    },
+    {
+        "title": "ENDOSCOPIE HYPOPHYSE 1",
+        "instruments": endoscopie_hypophyse_1_instruments,
     },
 ]
 
