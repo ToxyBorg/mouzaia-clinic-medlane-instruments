@@ -2137,6 +2137,57 @@ endoscopie_hypophyse_1_instruments = [
 ]
 
 
+adenome_prostate_AP_1_instruments = [
+    "K1008",
+    "K1301",
+    "20902",
+    "28402",
+    "28402",
+    "28402",
+    "28402",
+    "28402",
+    "02004",
+    "02002",
+    "01215",
+    "30938",
+    "30007",
+    "30933",
+    "47502",
+    "17809",
+    "17810",
+    "21103",
+    "02602",
+    "26712",
+    "26710",
+    "38916",
+    "38903",
+    "33605",
+    "UN130",
+    "37705",
+    "37607",
+    "56614",
+    "56614",
+    "35405",
+    "35101",
+    "35101",
+    "35513",
+    "34912",
+    "34912",
+    "35101",
+    "35103",
+    "35203",
+    "35203",
+    "35103",
+    "35103",
+    "56614",
+    "34103",
+    "35405",
+    "37607",
+    "UN145",
+    "UN145",
+    "UN140",
+]
+
 # Define the instrument sets to process
 instrument_sets = [
     {"title": "CESARIENNE 2", "instruments": cesarienne_2_instruments},
@@ -2236,6 +2287,10 @@ instrument_sets = [
     {
         "title": "ENDOSCOPIE HYPOPHYSE 1",
         "instruments": endoscopie_hypophyse_1_instruments,
+    },
+    {
+        "title": "ADENOME PROSTATE (AP) 1",
+        "instruments": adenome_prostate_AP_1_instruments,
     },
 ]
 
